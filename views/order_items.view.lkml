@@ -87,6 +87,13 @@ view: order_items {
     value_format_name: usd
   }
 
+  measure: average_sale_price {
+    type: average
+    sql: ${TABLE}."sale_price" ;;
+    value_format_name: usd
+    drill_fields: [id, orders.order_id, products.name, sale_price]
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
