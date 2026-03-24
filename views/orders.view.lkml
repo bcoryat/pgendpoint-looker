@@ -68,7 +68,7 @@ view: orders {
   }
   measure: total_revenue {
     type: sum
-    sql: ${TABLE}.order_amount ;;
+    sql: ${TABLE}."num_of_item" ;;
     value_format_name: usd
   }
 }
