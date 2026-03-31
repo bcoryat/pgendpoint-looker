@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "blossomc_pgendpoint2"
+connection: "pgendpoint_march31"
 
 # include all the views
 include: "/views/**/*.view.lkml"
