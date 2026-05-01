@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "pgendpoint_march31"
+connection: "pgendpoint_may1"
 
 # include all the views
 include: "/views/**/*.view.lkml"
@@ -59,11 +59,11 @@ explore: order_items {
   }
 
 # Adding the PDT join here
-  join: user_order_facts {
-    type: left_outer
-    sql_on: ${orders.user_id} = ${user_order_facts.user_id} ;;
-    relationship: many_to_one
-  }
+ # join: user_order_facts {
+ #   type: left_outer
+ #   sql_on: ${orders.user_id} = ${user_order_facts.user_id} ;;
+ #   relationship: many_to_one
+ # }
 
   join: products {
     type: left_outer
@@ -110,6 +110,6 @@ explore: products {
 
 explore: users {}
 
-explore: pdt_test {}
+# explore: pdt_test {}
 
-explore: top_states_derived {}
+# explore: top_states_derived {}
