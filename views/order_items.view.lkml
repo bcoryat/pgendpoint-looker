@@ -84,18 +84,19 @@ view: order_items {
 
   measure: total_sale_price {
     type: sum
-    sql: ${TABLE}."sale_price" ;;
+    sql: ${sale_price} ;;
     value_format_name: usd
   }
 
   measure: average_sale_price {
     type: average
-    sql: ${TABLE}."sale_price" ;;
+    sql: ${sale_price} ;;
     value_format_name: usd
     drill_fields: [id, orders.order_id, products.name, sale_price]
   }
 
-  # ----- Sets of fields for drilling ------
+
+# ----- Sets of fields for drilling ------
   set: detail {
     fields: [
       id,
@@ -109,5 +110,6 @@ view: order_items {
       users.last_name
     ]
   }
+
 
 }

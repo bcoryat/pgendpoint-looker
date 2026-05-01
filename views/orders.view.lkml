@@ -66,9 +66,5 @@ view: orders {
     type: count
     drill_fields: [order_id, users.id, users.first_name, users.last_name, order_items.count]
   }
-  measure: total_revenue {
-    type: sum
-    sql: ${TABLE}."num_of_item" ;;
-    value_format_name: usd
-  }
+
 }
