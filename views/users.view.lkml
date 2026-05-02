@@ -100,6 +100,12 @@ view: users {
     drill_fields: [detail*]
   }
 
+  measure: average_age {
+    type: average
+    sql: ${age} ;;
+    value_format_name: decimal_1
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
