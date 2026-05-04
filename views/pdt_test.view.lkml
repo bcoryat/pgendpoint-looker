@@ -7,7 +7,7 @@ view: pdt_test {
       FROM main.users
       GROUP BY 1 ;;
 
-    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP) ;;
+   datagroup_trigger: pgendpoint_the_look_model_default_datagroup
     publish_as_db_view: yes
     indexes: ["user_state"]
   }
