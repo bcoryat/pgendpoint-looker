@@ -9,6 +9,7 @@ view: pdt_test {
 
     sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP) ;;
     publish_as_db_view: yes
+    indexes: ["user_state"]
   }
 
   dimension: user_state {
