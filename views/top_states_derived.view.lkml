@@ -10,6 +10,7 @@ view: top_states_derived {
   }
 
   dimension: state {
+    primary_key: yes
     type: string
     sql: ${TABLE}.state ;;
   }
@@ -19,8 +20,15 @@ view: top_states_derived {
     sql: ${TABLE}.state_rank ;;
   }
 
+  dimension: user_count {
+    type: number
+    sql: ${TABLE}.user_count ;;
+    description: "Pre-aggregated user count per state"
+  }
+
   measure: total_users_in_top_states {
     type: sum
-    sql: ${TABLE}.user_count ;;
+    sql: ${user_count} ;;
+    description: "Sum of pre-aggregated user counts from derived table"
   }
 }
