@@ -59,11 +59,11 @@ explore: order_items {
   }
 
 # Adding the PDT join here
- # join: user_order_facts {
- #   type: left_outer
- #   sql_on: ${orders.user_id} = ${user_order_facts.user_id} ;;
- #   relationship: many_to_one
- # }
+  join: user_order_facts {
+    type: left_outer
+    sql_on: ${orders.user_id} = ${user_order_facts.user_id} ;;
+    relationship: many_to_one
+  }
 
   join: products {
     type: left_outer
