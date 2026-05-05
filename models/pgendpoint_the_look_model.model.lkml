@@ -113,3 +113,5 @@ explore: users {}
 explore: pdt_test {}
 
 explore: top_states_derived {}
+
+explore: pdt_trigger_test {}
