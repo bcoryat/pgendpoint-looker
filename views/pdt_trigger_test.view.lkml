@@ -9,6 +9,7 @@ view: pdt_trigger_test {
 
     sql_trigger_value: SELECT MAX(order_id) FROM main.orders ;;
     indexes: ["status"]
+    publish_as_db_view: yes
   }
 
   dimension: status {
