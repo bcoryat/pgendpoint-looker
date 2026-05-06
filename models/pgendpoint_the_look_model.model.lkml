@@ -117,3 +117,5 @@ explore: top_states_derived {}
 explore: pdt_trigger_test {}
 
 explore: pdt_datagroup_test{}
+
+explore: pdt_sql_trigger_publish_test {}
