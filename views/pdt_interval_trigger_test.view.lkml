@@ -7,7 +7,7 @@ view: pdt_interval_trigger_test {
       FROM main.orders
       GROUP BY 1 ;;
 
-    interval_trigger: "5 minutes"
+    interval_trigger: "24 hours"
     indexes: ["status"]
     publish_as_db_view: yes
   }
