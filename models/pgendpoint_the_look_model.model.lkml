@@ -119,3 +119,5 @@ explore: pdt_trigger_test {}
 explore: pdt_datagroup_test{}
 
 explore: pdt_sql_trigger_publish_test {}
+
+explore: pdt_interval_trigger_test {}
